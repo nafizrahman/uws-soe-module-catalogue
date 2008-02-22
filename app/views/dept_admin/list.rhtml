@@ -1,0 +1,29 @@
+<h1>Listing departments</h1>
+
+<table cellpadding="5" cellspacing="0">
+
+  
+<% for dept in @depts %>
+  <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+  
+  <td width="60%">
+   <span class="list-title"><%=h(dept.department_name)%></span><br />
+   <%=h (truncate(dept.discipline, 150))%>
+   </td>  
+  
+
+    <td class ="list-actions">
+    <%= link_to 'Show', :action => 'show', :id => dept %>
+    <%= link_to 'Edit', :action => 'edit', :id => dept %>
+    <%= link_to 'Destroy', { :action => 'destroy', :id => dept }, :confirm => 'Are you sure?', :post => true %>
+  </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @dept_pages.current.previous } if @dept_pages.current.previous %>
+<%= link_to 'Next page', { :page => @dept_pages.current.next } if @dept_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New dept', :action => 'new' %>

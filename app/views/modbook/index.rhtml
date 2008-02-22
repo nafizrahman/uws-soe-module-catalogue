@@ -1,0 +1,9 @@
+<h1>List of Departments</h1> 
+
+<% for mod in @mods -%>
+    
+        <h3><%=h(mod.module_code) %></h3>
+        <%= mod.title%>
+            
+        
+ <% end %>

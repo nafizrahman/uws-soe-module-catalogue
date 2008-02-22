@@ -1,0 +1,77 @@
+/* Global styles*/
+
+#notice {
+ border: 2px solid red;
+ padding: 1em;
+ margin-bottom: 2em;
+ background-color: #f0f0f0;
+ font: bold smaller sans-serif;
+}
+/* Styles for admin/list*/
+
+#mod-list .list-title {
+	color:	#244;
+	font-weight: bold;
+	font-size: larger;
+}
+
+#mod-list .list-actions {
+ font-size:	x-small;
+ text-align:	right;
+ padding-left: 	1em;
+}
+
+#mod-list .list-line-even {
+ background:	#e0f8f8;
+}
+
+#mod-list .list-line-even {
+ background: #f8bof8;
+}
+
+
+/* Styles for main page */
+
+#banner {
+ background: #9c9;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ border-bottom: 2px solid;
+ font: small-caps 40px/40px "Times New Roman", serif;
+ color: #282;
+ text-align: center;
+}
+ #banner img{
+ float: left;
+}
+
+#columns{
+ background: #141;
+}
+
+#main {
+ margin-left: 15em;
+ padding-top: 4ex;
+ padding-left: 2em;
+ background: white;
+}
+
+#side {
+ float: left;
+ padding-top: 1em;
+ padding-left: 1em;
+ width: 14em;
+ background: #141;
+}
+
+#side {
+ color: #bfb;
+ font-size: small;
+}
+
+h1{
+ font: 150% sans-serif;
+ color: #226;
+ border-bottom: 3px dotted #77d;
+}
+
