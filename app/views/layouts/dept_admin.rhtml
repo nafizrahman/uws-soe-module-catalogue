@@ -1,13 +1,16 @@
 <html>
 <head>
-  <title>DeptAdmin: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' 'mod' %>
+  <title> Swansea University Online Module Catalogue: Departments </title>
+  <%= stylesheet_link_tag 'modcatalogue' %>
 </head>
-<body>
+<body id="store">
+  <div id="banner">
+   <img src="/images/suheader.png"/>
 
-<p style="color: green"><%= flash[:notice] %></p>
+</div>
 
-<%= @content_for_layout %>
-
+<div id="main">
+     <%=yield :layout %>
+     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* Global styles*/
 
-#notice {
+/*#notice {
  border: 2px solid red;
  padding: 1em;
  margin-bottom: 2em;
@@ -14,6 +14,17 @@
 	font-weight: bold;
 	font-size: larger;
 }
+
+#mod-list .list-title2 {
+	font-weight: bold;
+	color:	#244;
+}
+
+#mod-list .list-textdesc {
+	font-style: italic;
+	
+}
+
 
 #mod-list .list-actions {
  font-size:	x-small;
@@ -32,15 +43,13 @@
 
 /* Styles for main page */
 
-#banner {
- background: #9c9;
+/*#banner {
  padding-top: 10px;
  padding-bottom: 10px;
- border-bottom: 2px solid;
  font: small-caps 40px/40px "Times New Roman", serif;
  color: #282;
  text-align: center;
-}
+}*/
  #banner img{
  float: left;
 }
@@ -50,13 +59,14 @@
 }
 
 #main {
- margin-left: 15em;
+ margin-left: 0em;
  padding-top: 4ex;
  padding-left: 2em;
  background: white;
+ 
 }
 
-#side {
+/*#side {
  float: left;
  padding-top: 1em;
  padding-left: 1em;
@@ -68,10 +78,11 @@
  color: #bfb;
  font-size: small;
 }
-
+*/
 h1{
  font: 150% sans-serif;
  color: #226;
  border-bottom: 3px dotted #77d;
 }
+
 
