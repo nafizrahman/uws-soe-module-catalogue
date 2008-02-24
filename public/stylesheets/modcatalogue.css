@@ -10,18 +10,29 @@
 /* Styles for admin/list*/
 
 #mod-list .list-title {
-	color:	#244;
+	color: #0066CC;
 	font-weight: bold;
-	font-size: larger;
+	
+/*	font-size: larger;*/
 }
 
 #mod-list .list-title2 {
 	font-weight: bold;
 	color:	#244;
 }
+#mod-list .list-dept {
+	font-size: 0.8em;
+	color: #244;
+}
 
 #mod-list .list-textdesc {
 	font-style: italic;
+	
+}
+
+#mod-list .list-image {
+	width: 90px;
+	height: 60px;
 	
 }
 
@@ -59,10 +70,13 @@
 }
 
 #main {
- margin-left: 0em;
+ margin-left: 5em;
+ margin-right: 5em;
  padding-top: 4ex;
  padding-left: 2em;
+ padding-right: 2em;
  background: white;
+ line-height:2.5em;
  
 }
 
@@ -80,9 +94,12 @@
 }
 */
 h1{
+ /*font-family:80% Verdana,Arial,Helvetica,sans-serif;*/
+ font-size: 1.5em;
  font: 150% sans-serif;
- color: #226;
- border-bottom: 3px dotted #77d;
+ color: #0066CC; /*#226;*/
+ border-bottom: 1px solid #77d;
+ line-height:1.5em;
 }
 
 

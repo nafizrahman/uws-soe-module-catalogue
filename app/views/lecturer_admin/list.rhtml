@@ -1,0 +1,29 @@
+<div id="mod-list">
+<h1>Listing Lecturers</h1>
+
+<table cellpadding="5" cellspacing="0">
+  <% for lecturer in @lecturers %>
+  <tr valign="top" class="<%=cycle('list-line-odd', 'list-line-even')%>">
+  
+  <td width="60%">
+  <span class="list-title"><%=h(lecturer.title)%>
+  <span class="list-title"><%=h(lecturer.surname)%></span><br />
+  <span class="list-dept"><%=h(lecturer.department) %></span><br/>
+     
+    <%=h (truncate(lecturer.taught_modules, 200))%>
+    
+  </td>
+
+    <td><%= link_to 'Show', :action => 'show', :id => lecturer %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => lecturer %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => lecturer }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @lecturer_pages.current.previous } if @lecturer_pages.current.previous %>
+<%= link_to 'Next page', { :page => @lecturer_pages.current.next } if @lecturer_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New lecturer', :action => 'new' %>

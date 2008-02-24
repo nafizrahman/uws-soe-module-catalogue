@@ -1,0 +1,25 @@
+<% for column in DegreeProgramme.content_columns %>
+<!--
+<p>
+  <b><%= column.human_name %>:</b> <%=h @degree_programme.send(column.name) %>
+</p>-->
+
+<p>
+  <b><%= column.human_name %>:</b> <%=h @degree_programme.send(column.name) %>
+</p>
+
+
+
+
+<!--
+<html>
+<body>
+<%= @degree_programme.title%>
+-->
+
+
+
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @degree_programme %> |
+<%= link_to 'Back', :action => 'list' %>

@@ -1,3 +1,4 @@
+<div id="mod-list">
 <h1>Listing Departments</h1>
 
 <table cellpadding="5" cellspacing="0">
@@ -6,9 +7,13 @@
 <% for dept in @depts %>
   <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>">
   
-  <td width="60%">
+  <td>
+    <img class ="list-image" src="<%=dept.image_url%>"/>
+    </td>
+  
+  <td width="80%">
    <span class="list-title"><%=h(dept.department_name)%></span><br />
-   <%=h (truncate(dept.discipline, 150))%>
+   <span class="list-dept"><%=h (truncate(dept.discipline, 150))%></span><br />
    </td>  
   
 
@@ -26,4 +31,4 @@
 
 <br />
 
-<%= link_to 'New dept', :action => 'new' %>
+<%= link_to 'New department', :action => 'new' %>

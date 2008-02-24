@@ -1,0 +1,28 @@
+<div id="mod-list">
+<h1>Listing Degree Programmes</h1>
+
+<table cellpadding="5" cellspacing="0">
+ 
+<% for degree_programme in @degree_programmes %>
+  <tr valign="top" class="<&= cycle('list-line-odd', 'list-line-even') %>">
+  <td width="60%">
+   <span class="list-title"><%= h(degree_programme.degree_code)%></span>
+   <span class="list-title2"><%= h(degree_programme.department)%></span><br />
+   <span class="list-title2"><%= h(degree_programme.title)%></span>
+   <span class="list-title2"><%= h(degree_programme.scheme)%></span><br />
+   <span class="list-textdesc"><%= h(truncate(degree_programme.description, 200))%></span>
+   </td>  
+  
+    <td><%= link_to 'Show', :action => 'show', :id => degree_programme %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => degree_programme %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => degree_programme }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @degree_programme_pages.current.previous } if @degree_programme_pages.current.previous %>
+<%= link_to 'Next page', { :page => @degree_programme_pages.current.next } if @degree_programme_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New degree programme', :action => 'new' %>
