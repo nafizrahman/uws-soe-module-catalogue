@@ -5,12 +5,12 @@
   <% for lecturer in @lecturers %>
   <tr valign="top" class="<%=cycle('list-line-odd', 'list-line-even')%>">
   
-  <td width="60%">
+  <td width="600%">
   <span class="list-title"><%=h(lecturer.title)%>
   <span class="list-title"><%=h(lecturer.surname)%></span><br />
-  <span class="list-dept"><%=h(lecturer.department) %></span><br/>
+  <span class="list-dept3"><%=h(lecturer.department) %></span><br/>
      
-    <%=h (truncate(lecturer.taught_modules, 200))%>
+    <span class="list-dept2"><%=h (truncate(lecturer.taught_modules, 200))%></span>
     
   </td>
 

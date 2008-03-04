@@ -20,8 +20,25 @@
 	font-weight: bold;
 	color:	#244;
 }
+#mod-list .list-login {
+	color: #0066CC;
+	font-size: 1.2em;
+	font-family: sans-serif;
+}
+
 #mod-list .list-dept {
 	font-size: 0.8em;
+	color: #244;
+}
+
+#mod-list .list-dept2 {
+	font-size: 0.8em;
+	font-style: italic;
+	color: #244;
+}
+#mod-list .list-dept3 {
+	font-size: 1.0em;
+	font-weight: bold;
 	color: #244;
 }
 
@@ -101,5 +118,39 @@ h1{
  border-bottom: 1px solid #77d;
  line-height:1.5em;
 }
+
+/*sytles for login */
+
+.mod-form fieldset {
+ background: #efe;
+ border: 1px solid #781351;
+ width: 30em;
+  margin-left: 15em;
+  margin-right: 5em;
+ 
+ }
+ 
+ .mod-form legend {
+ color: #dfd;
+ background: #0066CC;
+ font-family: sans-serif;
+ padding: 0.2em 1em;
+ }
+ 
+ .mod-form label { 
+ width: 5em;
+ margin-right: 0.5em;
+ display: block;
+
+}
+ 
+ }
+  */
+  
+ .mod-form .submit{
+  margin-left: 4.0em;
+  }
+  */
+ 
 
 
