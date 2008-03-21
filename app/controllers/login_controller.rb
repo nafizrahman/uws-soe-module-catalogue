@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
- layout "admin"
+  
+ layout "login"
  
   def add_user
     @user = User.new(params[:user])
@@ -10,6 +11,16 @@ class LoginController < ApplicationController
   end
 
   def login
+ session[:user_id] = nil
+ if request.post?
+  user = User.authenticate(params[:name], params[:password])
+  if user
+    session[:user_id] = user.id
+    redirect_to(:action=> "index")
+    else
+     flash[:notice] = "Invalid user/password combination"
+     end
+     end
   end
 
   def logout

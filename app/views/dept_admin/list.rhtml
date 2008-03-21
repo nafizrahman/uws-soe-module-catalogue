@@ -1,10 +1,13 @@
 <div id="mod-list">
-<h1>Listing Departments</h1>
+<h1>Listing Schools and Departments</h1>
+
+<p>The University is structured into ten Schools, covering the full range of academic areas available at Swansea. Each School encompasses broadly-related subjects, courses and research centres, and each has a strong commitment to maintaining a high standard of teaching and student support. 
+Below we have outlined the make-up of each School, however there may be more subject areas in which research is being carried out. Please visit the respective School website for further information by using the links on the right-hand side.
+</p>
 
 <table cellpadding="5" cellspacing="0">
 
-  
-<% for dept in @depts %>
+<% for dept in @depts.sort_by(&:department_name) %>
   <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>">
   
   <td>
@@ -12,12 +15,15 @@
     </td>
   
   <td width="80%">
+  <!-- <span class="list-title"><%= link_to "degree_programme_admin", :controller => "degree_programme_admin", :action => "list" %></span><br /> -->
    <span class="list-title"><%=h(dept.department_name)%></span><br />
    <span class="list-dept"><%=h (truncate(dept.discipline, 150))%></span><br />
    </td>  
   
 
     <td class ="list-actions">
+    
+    <a href="/dept_admin/list-eng">Select</a>
     <%= link_to 'Show', :action => 'show', :id => dept %>
     <%= link_to 'Edit', :action => 'edit', :id => dept %>
     <%= link_to 'Destroy', { :action => 'destroy', :id => dept }, :confirm => 'Are you sure?', :post => true %>

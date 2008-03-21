@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class User < ActiveRecord::Base
 
 validates_presence_of :name
@@ -36,7 +38,7 @@ def self.authenticate(name, password)
    
 private
 
-def self.encrypt_password(password, salt)
+def self.encrypted_password(password, salt)
  string_to_hash = password + "wibble" + salt # 'wibble' makes it harder to guess
  Digest::SHA1.hexdigest(string_to_hash)
  end

@@ -1,17 +1,27 @@
 <div id="mod-list">
  <h1>Listing Modules</h1>
+ 
+<span class="list-title">Level</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<span class="list-title">Semester</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<span class="list-title">Module Code</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<span class="list-title">Title</span>
 
 <table cellpadding ="5" cellspacing="0">
-  <%for mod in @mods %>
+  <% for mod in @mods.sort_by(&:module_level) %>
+
   <tr valign="top" class="<&= cycle('list-line-odd', 'list-line-even') %>">
    
    <td width="600%">
-    <span class="list-title"><%=h(mod.module_code)%></span>
-    <span class="list-title2"><%=h(mod.title)%></span><br />
-    <span class="list-textdesc"><%=h (truncate(mod.module_description, 150))%></span><br />
+    <span class="list-title2"><%=h(mod.module_level)%></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <span class="list-title2"><%=h(mod.semester)%></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    <span class="list-title2"><%=h(mod.module_code)%></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    <span class="list-title2"><%=h(mod.title)%></span> 
+   
+   <!-- <span class="list-textdesc"><%=h (truncate(mod.module_description, 150))%></span><br /> -->
    </td>  
 
-<td><%= link_to 'Show', :action => 'show', :id => mod %></td>
+
+    <td><%= link_to 'Show', :action => 'show', :id => mod %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => mod %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => mod }, :confirm => 'Are you sure?', :post => true %></td>
   </tr>

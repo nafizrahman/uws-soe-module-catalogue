@@ -1,0 +1,25 @@
+<h1>List of Degrees in the School of Engineering</h1>
+ 
+   <table>
+      <tr>
+        <th>Username</th>
+        <th>Date</th>
+        <th>Event</th>
+      </tr>
+      
+      <% for degree_programme in @degree_programmes %>
+        <tr>
+         <td><%=h degree_programme.department %></td>
+         <td><%= degree_programme.title%></td>
+         <td><%=h degree_programme.scheme %></td>
+         
+       </tr>
+       </tr>
+     <% end %>
+      
+   </table> 
+
+
+   
+ 
+

@@ -48,4 +48,11 @@ class AdminController < ApplicationController
     Mod.find(params[:id]).destroy
     redirect_to :action => 'list'
   end
+  
+  # def my_action
+#     # you fetch only the modules with 'engineering' as a title
+#     @mods = Module.find(:all, :conditions => ["title = 'engineering'"]
+#   end
+
+
 end

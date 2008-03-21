@@ -1,0 +1,31 @@
+<div id="mod-list">
+<h1>Listing Students</h1>
+
+
+<table cellpadding="5" cellspacing="0">
+<% for student in @students %>
+<tr valign="top" class="<%=cycle('list-line-odd', 'list-line-even')%>">
+
+<td width="600%">
+  <span class="list-title2"><%=h(student.student_code)%></span>
+  <span class="list-title2"><%=h(student.title)%></span>
+  <span class="list-title2"><%=h(student.other_names)%></span>
+  <span class="list-title2"><%=h(student.surname)%></span><br />  
+  <span class="list-dept3"><%=h(student.department) %></span><br/>
+  <span class="list-dept3"><%=h(student.degree_code) %></span><br/>
+
+  </td>  
+  
+    <td><%= link_to 'Show', :action => 'show', :id => student %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => student %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => student }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @student_pages.current.previous } if @student_pages.current.previous %>
+<%= link_to 'Next page', { :page => @student_pages.current.next } if @student_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New student', :action => 'new' %>

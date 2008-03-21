@@ -1,6 +1,6 @@
 class ModbookController < ApplicationController
 
   def index
-   @mods = Mod.find_mods_available
+   @depts = Dept.find_depts_available
   end
 end

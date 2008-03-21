@@ -2,7 +2,7 @@
 <h1>Listing Lecturers</h1>
 
 <table cellpadding="5" cellspacing="0">
-  <% for lecturer in @lecturers %>
+  <% for lecturer in @lecturers.sort_by(&:department) %>
   <tr valign="top" class="<%=cycle('list-line-odd', 'list-line-even')%>">
   
   <td width="600%">

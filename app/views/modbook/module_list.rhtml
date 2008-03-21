@@ -1,0 +1,28 @@
+<div id="mod-list">
+ <h1>Listing Modules</h1>
+
+<table cellpadding ="5" cellspacing="0">
+  <% for mod in @mods.sort_by(&:module_code) %> 
+  <tr valign="top" class="<&= cycle('list-line-odd', 'list-line-even') %>">
+   
+   <td width="600%">
+    <span class="list-title"><%=h(mod.module_code)%></span>
+    <span class="list-title2"><%=h(mod.title)%></span><br />
+    <span class="list-textdesc"><%=h (truncate(mod.module_description, 150))%></span><br />
+   </td>  
+
+<td><%= link_to 'Show', :action => 'show', :id => mod %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => mod %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => mod }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end%>
+</table>
+</div>
+
+ 
+<%= link_to 'Previous page', { :page => @mod_pages.current.previous } if @mod_pages.current.previous %>
+<%= link_to 'Next page', { :page => @mod_pages.current.next } if @mod_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New module', :action => 'new' %>

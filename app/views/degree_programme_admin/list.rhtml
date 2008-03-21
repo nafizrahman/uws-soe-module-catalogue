@@ -3,13 +3,13 @@
 
 <table cellpadding="5" cellspacing="0">
  
-<% for degree_programme in @degree_programmes %>
+<% for degree_programme in @degree_programmes.sort_by(&:department) %>
   <tr valign="top" class="<&= cycle('list-line-odd', 'list-line-even') %>">
   <td width="600%">
    <span class="list-title"><%= h(degree_programme.degree_code)%></span>
-   <span class="list-title2"><%= h(degree_programme.department)%></span><br />
    <span class="list-title2"><%= h(degree_programme.title)%></span>
    <span class="list-title2"><%= h(degree_programme.scheme)%></span><br />
+   <span class="list-title2"><%= h(degree_programme.department)%></span><br />
    <span class="list-textdesc"><%= h(truncate(degree_programme.description, 200))%></span>
    </td>  
   

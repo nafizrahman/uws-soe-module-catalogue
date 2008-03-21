@@ -1,5 +1,9 @@
 class Mod < ActiveRecord::Base
- 
+
+has_and_belongs_to_many :lecturers
+has_and_belongs_to_many :students
+has_and_belongs_to_many :degree_programmes
+  
   def self.find_mods_available
  find(:all, :order => "module_code")
  end

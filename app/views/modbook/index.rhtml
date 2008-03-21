@@ -1,9 +1,34 @@
-<h1>List of Departments</h1> 
+<h1>Welcome</h1> 
+<p> Welcome to Swansea University's Online Module Catalogue. Here you
+will find information on all the degree schemes and taught modules that
+the University has to offer. Below you can choose to list all the modules that
+the University has to offer OR you can choose to list the departments of the University
+to see what courses we teach.</p>
 
-<% for mod in @mods -%>
-    
-        <h3><%=h(mod.module_code) %></h3>
-        <%= mod.title%>
-            
-        
- <% end %>
+<p> List <a href="/admin/list"> Departmental Modules </a>
+</p>
+
+<p> List <a href="/dept_admin/list"> Departmental Programmes </a>
+</p>
+
+
+<!-- <div id="mod-list">
+
+<h1> List of Departments </h1>
+<table cellpadding="5" cellspacing="0">
+
+<% for dept in @depts %>
+  <tr valign="centered" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+  
+  <td>
+    <img class ="list-image" src="<%=dept.image_url%>"/>
+    </td>
+  
+  <td width="100%">
+   <span class="list-title"><%=h(dept.department_name)%></span><br />
+   <span class="list-dept"><%=h (truncate(dept.discipline, 150))%></span><br />
+   </td>  
+   
+   <% end %>
+</table>
+-->
